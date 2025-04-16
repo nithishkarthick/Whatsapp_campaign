@@ -13,7 +13,7 @@ function App() {
   const [selectedTemplate, setSelectedTemplate] = useState('');
 
   const [templates] = useState([
-    { name: 'Hello World' },
+    { name: 'adi_dravidar_welcome_temp' },
     { name: 'DBT Issues' },
     { name: 'survey' },
   ]);
@@ -82,7 +82,7 @@ function App() {
     setSuccessMessage('');
 
     try {
-      const response = await axios.post('http://localhost:5000/send-survey', {
+      const response = await axios.post('http://localhost:5001/send-survey', {
         phoneNumbers, 
         template: selectedTemplate, 
       });
